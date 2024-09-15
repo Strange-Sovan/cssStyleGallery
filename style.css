@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 30px 50px;
+    background-color: black;
+}
+.gallary1{
+    display: flex;
+    height: 30vh;
+    width: 40%;
+    gap: 2px;
+}
+
+.gallary1 img{
+    width: 12%;
+    height: 30vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+.gallary1 img:hover{
+    width: 100%;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.gallary2{
+    height: 400px;
+    margin: 200px auto;
+    position: relative;
+}
+
+.gallary2 img:nth-child(1){
+    height: 100%;
+    box-shadow: 0px 10px 15px -3px rgba(216, 210, 210, 0.632);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.gallary2 img:nth-child(2){
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(12%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallary2:hover img:nth-child(1){
+    transform: perspective(250px)
+                rotateX(40deg)
+                translateY(-5%)
+                translateZ(0);  
+} 
+.gallary2:hover img:nth-child(2){
+    opacity: 1; 
+    transform: translateY(40deg), scale(1.5em);
+} 
